@@ -1,0 +1,33 @@
+package practice.java.sorting;
+
+import java.util.Scanner;
+
+public class SelectionSort {
+	
+	public static int[] selectionSort(int[] arr) {
+		for(int i=0;i<arr.length-1;i++) {
+			int min = arr[i],idx=0;
+			for(int j = i+1;j<=arr.length;j++) {
+				if(min>arr[j]) {
+					min=arr[j];
+					idx=j;
+				}
+			}
+			arr[i] = arr[i] + arr[idx];
+			arr[idx] = arr[i] - arr[idx];
+			arr[i] = arr[i] - arr[idx];
+		}
+		return arr;
+	}
+	public static void main(String[] args) {
+		Scanner sc = new Scanner(System.in);
+		int[] arr = new int[10];
+		for(int i=0;i<arr.length;i++)
+			arr[i]=sc.nextInt();
+		
+		System.out.println(arr);
+		System.out.println(SelectionSort.selectionSort(arr));
+		
+	}
+
+}

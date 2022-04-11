@@ -1,7 +1,7 @@
 package practice.java.exceptions;
 
 
-public class IllegalDrinkingAgeException extends Exception{
+final class IllegalDrinkingAgeException extends RuntimeException{
 
 	IllegalDrinkingAgeException(int age){
 		super(age + " is below 21. Therefore it is illegal to drink");
