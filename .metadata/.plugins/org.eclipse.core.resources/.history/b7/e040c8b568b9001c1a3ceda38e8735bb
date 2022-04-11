@@ -1,0 +1,18 @@
+package practice.java.exceptions;
+
+public class ArrayidxOutOfBounds {
+
+	public static void main(String[] args) {
+		int arr[] = new int[20];
+		
+		try {
+			System.out.println(arr[25]);
+		}
+		catch(ArrayIndexOutOfBoundsException ai) {
+			System.out.println(ai);
+			System.out.println("We tried to access an array index that doesnt exist");
+		}
+
+	}
+
+}

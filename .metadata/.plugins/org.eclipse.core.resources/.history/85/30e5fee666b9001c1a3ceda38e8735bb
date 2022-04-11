@@ -1,0 +1,15 @@
+package practice.java.exceptions;
+
+public class DefaultException {
+
+	public static void main(String[] args) {
+		
+		int n = 1;
+		try{
+		System.out.println(n/0);}
+		catch(ArithmeticException ae) {
+			System.out.println(ae);
+		}
+	}
+
+}

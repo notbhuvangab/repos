@@ -1,0 +1,28 @@
+package practice.java.exceptions;
+
+import java.util.Scanner;
+
+public class DefaultException {
+
+	public static void main(String[] args) {
+
+		int x,y;
+		Scanner sc = new Scanner(System.in);
+		
+		try {
+			System.out.println("Input x:");
+			x = sc.nextInt();
+			System.out.println("Input y:");
+			y = sc.nextInt();
+			System.out.println(x/y);
+		} catch (ArithmeticException ae) {
+			System.out.println(ae);
+			System.out.println("we tried to divide the input number by 0");
+		}
+		
+		finally {
+			sc.close();
+		}
+	}
+
+}
