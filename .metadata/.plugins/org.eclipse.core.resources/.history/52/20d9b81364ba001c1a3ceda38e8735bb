@@ -152,41 +152,29 @@ public class Sort {
 
 		int temp = sc.nextInt();
 
-		
+		System.out.println("Given array is:");
+		System.out.println(Arrays.toString(arr));
+		System.out.println("The sorted array is:");
 
 		switch (temp) {
 		case 1:
-			System.out.println("Given array is:");
-			System.out.println(Arrays.toString(arr));
-			System.out.println("The sorted array is:");
 			System.out.println(Arrays.toString(Sort.bubbleSort(arr)));
 			break;
 		case 2:
-			System.out.println("Given array is:");
-			System.out.println(Arrays.toString(arr));
-			System.out.println("The sorted array is:");
 			System.out.println(Arrays.toString(Sort.insertionSort(arr)));
 			break;
 		case 3:
-			System.out.println("Given array is:");
-			System.out.println(Arrays.toString(arr));
-			System.out.println("The sorted array is:");
 			System.out.println(Arrays.toString(Sort.selectionSort(arr)));
 			break;
 		case 4:
-			System.out.println("Given array is:");
-			System.out.println(Arrays.toString(arr));
-			System.out.println("The sorted array is:");
 			Sort.mergeSort(arr);
 			System.out.println(Arrays.toString(arr));
 			break;
 		case 5:
-			System.out.println("Given array is:");
-			System.out.println(Arrays.toString(arr));
-			System.out.println("The sorted array is:");
 			Sort.quickSort(arr, 0, arr.length - 1);
 			System.out.println(Arrays.toString(arr));
 			break;
+		case 6:
 
 		default:
 			System.out.println("Invalid input");
