@@ -1,0 +1,50 @@
+package practice.java.datastructures;
+
+import practice.java.datastructures.LinkedList.Node;
+
+public class DoublyLinkedList {
+
+	Node head = null, tail = null;
+
+	class Node {
+		int data;
+		Node next;
+		Node prev;
+
+		Node(int d) {
+			this.data = d;
+			this.next = null;
+			this.prev = null;
+		}
+	}
+	
+	public void addNode(int data) {
+		Node newNode = new Node(data);
+
+		if (head == null) {
+			head = newNode;
+			tail = newNode;
+		} else {
+			tail.next = newNode;
+			newNode.prev = tail;
+			tail = newNode;
+		}
+	}
+	
+	public void displayList() {
+		Node temp = head;
+
+		if (temp == null) {
+			System.out.println("List is Empty!");
+		} else {
+			while (temp != null) {
+				if (temp.next == null)
+					System.out.print(temp.data);
+				else
+					System.out.print(temp.data + " <-> ");
+				temp = temp.next;
+			}
+		}
+	}
+	
+}

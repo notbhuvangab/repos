@@ -1,0 +1,28 @@
+package practice.java.datastructures;
+
+public class MainRunner {
+
+	public static void main(String[] args) {
+		
+		DoublyLinkedList dll = new DoublyLinkedList();
+		
+		dll.addNode(5);
+		dll.addNode(10);
+		dll.addNode(15);
+		dll.addNode(20);
+		dll.addNode(25);
+		
+		dll.displayList();
+		
+		BinaryTree bt = new BinaryTree();
+		
+		bt.insert(10);
+		bt.insert(50);
+		bt.insert(25);
+		bt.insert(40);
+		bt.insert(27);
+		
+		bt.inorder();
+	}
+
+}

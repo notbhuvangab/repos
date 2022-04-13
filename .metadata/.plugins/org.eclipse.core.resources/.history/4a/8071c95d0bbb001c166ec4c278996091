@@ -1,0 +1,17 @@
+package practice.java.datastructures;
+
+public class MainRunner {
+
+	public static void main(String[] args) {
+		BinaryTree bt = new BinaryTree();
+		
+		bt.insert(10);
+		bt.insert(50);
+		bt.insert(25);
+		bt.insert(40);
+		bt.insert(27);
+		
+		bt.inorder();
+	}
+
+}

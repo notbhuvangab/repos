@@ -1,0 +1,51 @@
+package practice.java.datastructures;
+
+public class BinarySearchTree {
+
+	public class Node {
+		int data;
+		Node left;
+		Node right;
+
+		Node(int data) {
+			this.data = data;
+			this.left = null;
+			this.right = null;
+		}
+	}
+
+	Node root;
+
+	public void insert(int data) {
+		root = insertRecursive(root, data);
+	}
+
+	public Node insertRecursive(Node root, int data) {
+
+		if (root == null) {
+			root = new Node(data);
+			return root;
+		}
+
+		if (data < root.data) {
+			root.left = insertRecursive(root.left, data);
+		} else {
+			root.right = insertRecursive(root.right, data);
+		}
+
+		return root;
+	}
+	
+	void inorder() {
+		inorderRecursive(root);
+	}
+	
+	void inorderRecursive(Node root) {
+		if(root!=null) {
+		inorderRecursive(root.left);
+		System.out.print(root.data+" ");
+		inorderRecursive(root.right);
+		}
+	}
+	
+}

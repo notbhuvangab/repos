@@ -145,14 +145,12 @@ public class Sort {
 
 		System.out.println("Choost type of sorting:");
 		System.out.println("1. Bubble Sort");
-		System.out.println("2. Insertion Sort");				// Menu
+		System.out.println("2. Insertion Sort"); // Menu
 		System.out.println("3. Selection Sort");
 		System.out.println("4. Merge Sort");
 		System.out.println("5. Quick Sort");
 
 		int temp = sc.nextInt();
-
-		
 
 		switch (temp) {
 		case 1:

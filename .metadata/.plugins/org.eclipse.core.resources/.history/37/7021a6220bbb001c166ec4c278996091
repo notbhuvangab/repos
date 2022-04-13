@@ -1,0 +1,21 @@
+package practice.java.datastructures;
+
+public class DoublyLinkedList {
+
+	Node head = null, tail = null;
+
+	class Node {
+		int data;
+		Node next;
+		Node prev;
+
+		Node(int d) {
+			this.data = d;
+			this.next = null;
+			this.prev = null;
+		}
+	}
+	
+	
+	
+}
