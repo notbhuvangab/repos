@@ -46,6 +46,7 @@ public class BinarySearchTree {
 
 	public void delete(int data) {
 		root = deleteRecursive(root, data);
+		System.out.println(root.data);
 	}
 
 	public Node deleteRecursive(Node root, int data) {
@@ -75,15 +76,6 @@ public class BinarySearchTree {
 
 		while (temp.left != null) {
 			temp = temp.left;
-		}
-		return temp;
-	}
-	
-	public Node maxValue(Node node) {
-		Node temp = node;
-
-		while (temp.right != null) {
-			temp = temp.right;
 		}
 		return temp;
 	}
