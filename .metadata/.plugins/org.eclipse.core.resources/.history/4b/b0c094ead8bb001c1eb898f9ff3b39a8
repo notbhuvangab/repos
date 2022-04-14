@@ -1,0 +1,29 @@
+package practice.java.datastructures;
+
+import java.util.ArrayList;
+import java.util.List;
+
+public class Graphs {
+	int v;
+
+	public List<ArrayList<Integer>> adj = new ArrayList<ArrayList<Integer>>(v);
+
+	public Graph(int vertices){
+		this.v = vertices;
+	}
+
+	
+	for(int i = 0;i<v;i++) {                         
+		adj.add(new ArrayList<Integer>());
+	}
+
+	public void addEdge(int vertex,int link)
+	{
+		adj.get(vertex).add(link);
+		adj.get(link).add(vertex);
+	}
+	public static void main(String [] args)
+	{
+		
+	}
+}

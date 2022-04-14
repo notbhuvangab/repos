@@ -1,0 +1,63 @@
+package practice.java.datastructures;
+
+import java.util.ArrayList;
+import java.util.Stack;
+import java.util.List;
+
+public class Graph {
+
+	int v;
+
+	public List<ArrayList<Integer>> adj = new ArrayList<ArrayList<Integer>>(v);
+
+	public Graph() {
+		for (int i = 0; i < v; i++)
+			adj.add(new ArrayList<Integer>());
+	}
+
+	public Graph(int vertices) {
+		this.v = vertices;
+		for (int i = 0; i < v; i++)
+			adj.add(new ArrayList<Integer>());
+	}
+
+	public void addEdge(int vertex, int link) {
+		adj.get(vertex - 1).add(link - 1);
+		adj.get(link - 1).add(vertex - 1);
+	}
+
+	public void show() {
+		for (int i = 0; i < v; i++) {
+			System.out.println("The vertex " + (i + 1) + " has edges to:");
+			for (int idx : adj.get(i))
+				System.out.print(idx + 1 + " ");
+
+			System.out.println();
+		}
+	}
+	
+	public void dfs(int index) {
+		Stack<Integer> stack = new Stack<Integer>();
+		List<Integer> list = new ArrayList<Integer>();
+		
+		list.add(index);
+		for(int i:adj.get(index-1))
+			stack.push(i);
+		System.out.print("Stack:");
+		System.out.println(stack);
+		
+		while(list.size() < v) {
+			int temp = stack.pop();
+			list.add(temp);
+			for(int i:adj.get(temp-1)) {
+				if(stack.search(i) == -1)
+					stack.push(i);
+			}
+			System.out.print("Stack:");
+			System.out.println(stack);
+		}
+		
+		System.out.println(list);
+	}
+
+}
