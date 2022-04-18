@@ -1,0 +1,5 @@
+package practice.java.algorithms;
+
+public class UnionFind {
+
+}

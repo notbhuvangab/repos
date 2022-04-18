@@ -1,0 +1,13 @@
+package practice.java.algorithms;
+
+import practice.java.datastructures.Graph;
+
+public class Dijkstra {
+
+	public static void main(String[] args) {
+	
+		
+		
+	}
+
+}
